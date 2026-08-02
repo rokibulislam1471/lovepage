@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Question ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    position:relative;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#yes{
+    background:#28a745;
+    color:white;
+}
+
+#no{
+    background:#dc3545;
+    color:white;
+    position:absolute;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Do you love me? ❤️</h1>
+
+<br>
+
+<button id="yes">Yes ❤️</button>
+
+<button id="no">No 💔</button>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+let x=Math.random()*250;
+let y=Math.random()*250;
+
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=function(){
+
+document.body.innerHTML=`
+<div style="display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-size:40px;
+background:pink;
+font-family:Arial;
+text-align:center;">
+❤️ I knew it!! ❤️<br><br>
+Love you forever 🥰
+</div>`;
+
+}
+
+</script>
+
+</body>
+</html>
